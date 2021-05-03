@@ -1,7 +1,7 @@
-#include <vector>
-
 #ifndef GRAPH_H
 #define GRAPH_H
+
+#include <vector>
 
 typedef std::vector <int> v;
 typedef std::vector <v> adj;
