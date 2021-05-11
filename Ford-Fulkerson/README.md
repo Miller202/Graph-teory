@@ -4,8 +4,8 @@
 
 - Na primeira linha temos dois números inteiros, *V* e *E*. Sendo *V* o número de vértices e *E* o número de arestas do grafo;
 - Na segunda linha temos dois inteiros, *begin* e *end*. Sendo *begin* o vértice de origem e *end* o vértice de destino;
-- Depois, teremos *E* linhas, que representam as arestas do grafo, sendo cada aresta composta por três inteiros: **v1**, **v2**, **weight**;
-- **v1** e **v2** são os vértices conectados pela aresta e **weight** é a capacidade/peso da aresta;
+- Depois, teremos *E* linhas, que representam as arestas do grafo, sendo cada aresta composta por três inteiros: **v1**, **v2**, **cap**;
+- **v1** e **v2** são os vértices conectados pela aresta e **cap** é a capacidade da aresta;
 - Vale ressaltar que para o funcionamento correto do algoritmo, a entrada deve ser composta por vértices com valores de 0 a *V* - 1;
 
 - Abaixo temos um exemplo de grafo com 6 vértices e 10 arestas, presente no arquivo `input.in`:
