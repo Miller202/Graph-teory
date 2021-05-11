@@ -27,7 +27,7 @@
 ## Saída
 
 - A saída retorna o fluxo máximo do grafo a partir do algoritmo de Ford-Fulkerson;
-- No exemplo presente no arquivo `input.in`, temos a seguinte saída:
+- Com o exemplo presente no arquivo `input.in`, temos a seguinte saída:
 
 ```
 Max Flow: 12
@@ -40,3 +40,7 @@ Max Flow: 12
 ```
 ./ford_fulkerson < input.in
 ```
+
+## Complexidade
+
+- O algoritmo possui uma complexidade aproximadamente de `n log n`;
