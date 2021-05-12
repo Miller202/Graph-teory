@@ -2,7 +2,6 @@
 #include "graph.h"
 #include "heap.h"
 
-//Print the constructed MST
 void printArr(int arr[], int n)
 {
     printf("\nConstructed MST: \n");
@@ -17,18 +16,16 @@ void PrimMST(struct Graph* graph)
     int parent[V]; //Array to store constructed MST
     int key[V]; //Key values used to pick minimum weight edge
 
-    //minHeap represents set E
     struct MinHeap* minHeap = createMinHeap(V);
 
     //Initialize min heap with all vertices.
-    for (int v = 1; v < V; ++v) {
+    for (int v = 1; v < V; ++v){
         parent[v] = -1;
         key[v] = INT_MAX;
         minHeap->array[v] = newMinHeapNode(v, key[v]);
         minHeap->pos[v] = v;
     }
 
-    //Make key value of 0th vertex as 0 so that it is extracted first
     key[0] = 0;
     minHeap->array[0] = newMinHeapNode(0, key[0]);
     minHeap->pos[0] = 0;
@@ -37,18 +34,18 @@ void PrimMST(struct Graph* graph)
     minHeap->size = V;
 
     //Min heap contains all nodes not yet added to MST.
-    while (!isEmpty(minHeap)) {
+    while (!isEmpty(minHeap)){
         //Extract the vertex with minimum key value
         struct MinHeapNode* minHeapNode = extractMin(minHeap);
         int u = minHeapNode->v;
 
         struct AdjListNode* AdjAux = graph->array[u].head;
-        while (AdjAux != NULL) {
+        while (AdjAux != NULL){
             int v = AdjAux->dest;
 
             //If v is not yet included in MST and weight of u-v is less than key value of v,
             //then update key value and parent of v
-            if (isInMinHeap(minHeap, v) && AdjAux->weight < key[v]) {
+            if (isInMinHeap(minHeap, v) && AdjAux->weight < key[v]){
                 key[v] = AdjAux->weight;
                 parent[v] = u;
                 decreaseKey(minHeap, v, key[v]);
