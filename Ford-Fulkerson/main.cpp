@@ -23,7 +23,7 @@ int main(){
         graph.adj_list[v1][v2] = cap;
     }
 
-    cout << "Max Flow: " << fordFulkerson(graph, begin, end) << endl;
+    cout << "\nMax Flow: " << fordFulkerson(graph, begin, end) << endl;
 
     return 0;
 }
