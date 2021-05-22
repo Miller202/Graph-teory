@@ -52,4 +52,4 @@ Constructed MST:
 
 ## Complexidade
 
-- O algoritmo possui uma complexidade aproximadamente de `n log n`;
+- O algoritmo possui uma complexidade aproximadamente de `O(ElogV)`;
