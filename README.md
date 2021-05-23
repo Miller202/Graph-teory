@@ -5,3 +5,10 @@
  
  - Hellena Almeida Canuto
  - Michael Miller Rodrigues Cardoso
+
+## Algoritmos implementados
+
+ - Dijkstra
+ - Ford-Fulkerson
+ - Kruskal
+ - Prim
